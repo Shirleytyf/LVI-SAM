@@ -5,7 +5,7 @@
 
     <!--- Run Rviz-->
     <include file="$(find lvi_sam)/launch/include/module_rviz.launch" />
-
+    <!--node pkg="rviz" type="rviz" name="rviz" args="-d $(find nav_demo)/config/nav_test.rviz" /-->
     <!--- SAM -->
     <include file="$(find lvi_sam)/launch/include/module_sam.launch" />
 

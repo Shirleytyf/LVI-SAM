@@ -226,7 +226,7 @@ void lidar_callback(const sensor_msgs::PointCloud2ConstPtr& laser_msg)
 {
     static int lidar_count = -1;
     if (++lidar_count % (LIDAR_SKIP+1) != 0)
-        return;
+        return; //订阅雷达目的是给视觉特征点提供深度信息，短时间内图像和雷达变化不大，适当降低雷达频率
 
     // 0. listen to transform
     static tf::TransformListener listener;

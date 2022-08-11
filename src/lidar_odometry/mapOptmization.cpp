@@ -34,9 +34,9 @@ struct PointXYZIRPYT
     float pitch;
     float yaw;
     double time;
-    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW // 这个是eigen字节对齐用的
 } EIGEN_ALIGN16;
-
+//注册为PCL点云格式 （PCL内有自己定义的一系列点云格式，用结构体扩展后需要注册）
 POINT_CLOUD_REGISTER_POINT_STRUCT (PointXYZIRPYT,
                                    (float, x, x) (float, y, y)
                                    (float, z, z) (float, intensity, intensity)
